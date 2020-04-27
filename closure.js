@@ -1,30 +1,31 @@
 function getMathModule(x) {
 
+    let y = 1;
     return {
-        sum: (x, y) => {
+        sum: () => {
             return x + y;
         },
-        subtract: (x, y) => {
+        subtract: () => {
             return x - y;
         },
-        multiply: (x, y) => {
+        multiply: () => {
             return x * y;
         },
-        devide: (x, y) => {
+        devide: () => {
             return x / y;
         },
     };
 }
 
-let mathModule = getMathModule();
+let mathModule = getMathModule(5);
 
 // for testing purpose 
-let sum = mathModule.sum(5, 5);
-let subt = mathModule.subtract(5, 5);
-let mult = mathModule.multiply(5, 5);
-let dev = mathModule.devide(5, 5);
+let sum = mathModule.sum();
+let subt = mathModule.subtract();
+let mult = mathModule.multiply();
+let dev = mathModule.devide();
 
 console.log(sum);
+console.log(subt);
 console.log(mult);
 console.log(dev);
-console.log(subt);
